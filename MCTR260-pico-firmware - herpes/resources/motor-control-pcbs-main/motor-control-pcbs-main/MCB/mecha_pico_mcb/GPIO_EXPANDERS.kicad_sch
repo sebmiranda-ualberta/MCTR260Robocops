@@ -1,0 +1,14 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "1eef8e02-5507-4082-b539-5f7156bc1b8f")
+	(paper "A4")
+	(title_block
+		(title "MechaPicoMCB")
+		(date "2025-09-15")
+		(rev "v0.0")
+		(comment 4 "Author: Stephine Yearley")
+	)
+	(lib_symbols)
+)

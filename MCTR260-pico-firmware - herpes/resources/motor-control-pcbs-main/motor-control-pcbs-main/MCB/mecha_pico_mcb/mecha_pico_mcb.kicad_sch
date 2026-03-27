@@ -1,0 +1,281 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "af323146-46b3-4d95-8cd6-8896fbba8db5")
+	(paper "USLegal")
+	(title_block
+		(title "MechaPicoMCB")
+		(date "2025-09-15")
+		(rev "v0.1")
+		(company "University of Alberta, Faculty of Engineering")
+		(comment 1 "License : CC BY-NC 4.0")
+		(comment 3 "File : Schematic Root")
+		(comment 4 "Author: Stephine Yearley")
+	)
+	(lib_symbols)
+	(text "DC MOTOR"
+		(exclude_from_sim no)
+		(at 92.71 111.76 0)
+		(effects
+			(font
+				(size 3.81 3.81)
+			)
+		)
+		(uuid "0adf8885-dc16-4328-9c7d-6a43ff12068f")
+	)
+	(text "GPIO Expanders"
+		(exclude_from_sim no)
+		(at 222.25 57.912 0)
+		(effects
+			(font
+				(size 3.81 3.81)
+			)
+		)
+		(uuid "11139079-52bc-487c-b32e-cce7c42bbee7")
+	)
+	(text "STEPPER MOTOR"
+		(exclude_from_sim no)
+		(at 182.626 112.522 0)
+		(effects
+			(font
+				(size 3.81 3.81)
+			)
+		)
+		(uuid "9fd24ae5-8450-40fb-8266-c4df9a2c9377")
+	)
+	(text "POWER"
+		(exclude_from_sim no)
+		(at 137.668 159.258 0)
+		(effects
+			(font
+				(size 3.81 3.81)
+			)
+		)
+		(uuid "d9add0de-3c34-44cd-b032-8e357606f504")
+	)
+	(text "PICO INVENTOR\nLLShft\nI2C <-> SPI"
+		(exclude_from_sim no)
+		(at 133.604 55.372 0)
+		(effects
+			(font
+				(size 3.81 3.81)
+			)
+		)
+		(uuid "fff98102-b9ac-4e0e-a006-fccb6c136dc0")
+	)
+	(sheet
+		(at 62.23 97.79)
+		(size 60.96 29.21)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 200 200 200 1.0000)
+		)
+		(uuid "2ec2f72a-65e4-4d06-a462-87b22255ceb3")
+		(property "Sheetname" "DC_MOTOR"
+			(at 62.738 97.028 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "motor_driver.kicad_sch"
+			(at 62.484 128.524 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "mecha_pico_mcb"
+				(path "/af323146-46b3-4d95-8cd6-8896fbba8db5"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 152.4 96.52)
+		(size 62.23 31.75)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 200 200 200 1.0000)
+		)
+		(uuid "7231d373-af44-43e1-8b57-659e91b481bb")
+		(property "Sheetname" "STEPPER MOTOR"
+			(at 152.4 95.8084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "stepper_motor_drv.kicad_sch"
+			(at 152.4 128.8546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "mecha_pico_mcb"
+				(path "/af323146-46b3-4d95-8cd6-8896fbba8db5"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 199.39 41.91)
+		(size 45.72 29.21)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 200 200 200 1.0000)
+		)
+		(uuid "7be41057-e10a-4c51-b2bb-601701001bd4")
+		(property "Sheetname" "GPIO_EXPANDER"
+			(at 199.39 41.1984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "gpio_expander.kicad_sch"
+			(at 199.39 71.7046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "mecha_pico_mcb"
+				(path "/af323146-46b3-4d95-8cd6-8896fbba8db5"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 109.22 140.97)
+		(size 59.69 34.29)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 200 200 200 1.0000)
+		)
+		(uuid "8ec03c31-4dc8-480f-b6e4-d84234fd2874")
+		(property "Sheetname" "Power"
+			(at 109.22 140.2584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power_terminals.kicad_sch"
+			(at 109.22 175.8446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "mecha_pico_mcb"
+				(path "/af323146-46b3-4d95-8cd6-8896fbba8db5"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 104.14 36.83)
+		(size 59.69 34.29)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 200 200 200 1.0000)
+		)
+		(uuid "e2564a81-ffb3-426b-8b7a-3fbea28f167c")
+		(property "Sheetname" "PicoInventor"
+			(at 104.14 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "pico_inventor.kicad_sch"
+			(at 104.14 71.7046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "mecha_pico_mcb"
+				(path "/af323146-46b3-4d95-8cd6-8896fbba8db5"
+					(page "1")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "0")
+		)
+	)
+	(embedded_fonts no)
+)

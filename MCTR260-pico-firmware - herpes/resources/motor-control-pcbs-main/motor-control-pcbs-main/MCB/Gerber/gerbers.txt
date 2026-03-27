@@ -1,0 +1,2 @@
+this folder should contain produced gerber files for your design
+you can delete this text file

@@ -1,0 +1,7 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "0_Custom")(type "KiCad")(uri "${KIPRJMOD}/../../MCB/mecha_pico_mcb/0_Custom.pretty")(options "")(descr ""))
+  (lib (name "termBlock")(type "KiCad")(uri "${KIPRJMOD}/../../MCB/mecha_pico_mcb/OSTTC042162/KiCADv6/footprints.pretty")(options "")(descr ""))
+  (lib (name "fuseHolder")(type "KiCad")(uri "${KIPRJMOD}/../../MCB/mecha_pico_mcb/FuseHolder")(options "")(descr ""))
+  (lib (name "BladeFuseHolder")(type "KiCad")(uri "${KIPRJMOD}/../../MCB/mecha_pico_mcb/BladeFuseHolder/KiCADv6/footprints.pretty")(options "")(descr ""))
+)

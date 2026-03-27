@@ -1,0 +1,55 @@
+#include "project_config.h"
+
+#include "profile_intake_DC_motor.h"
+#include "drivers/mcp23017.h"
+#include <Arduino.h>
+#include <math.h>
+
+// Deadzone threshold - inputs below this magnitude are treated as "stop"
+static const float AUX_DEADZONE = 50.0f;
+
+static const uint8_t DC_MOTOR_PORTA_MASK =
+    IN_MOT_3N_BIT | IN_MOT_3P_BIT | IN_MOT_4N_BIT | IN_MOT_4P_BIT;
+
+static uint8_t motorCommandBitsForInput(float input, uint8_t positiveBit,
+                                        uint8_t negativeBit) {
+  if (input > AUX_DEADZONE) {
+    return positiveBit;
+  }
+  if (input < -AUX_DEADZONE) {
+    return negativeBit;
+  }
+  return 0;
+}
+
+void profile_aux_motors_apply(const control_command_t *cmd) {
+  uint8_t nextPortA = mcpDCMotor.getPortA() & ~DC_MOTOR_PORTA_MASK;
+
+  //DC Motor 3 (on/off direction via MCP23017 U6_2)
+#ifdef ENABLE_DC_MOTOR_3
+  {
+    float input = cmd->aux[DC_MOTOR_3_AUX_CHANNEL] * DC_MOTOR_3_DIR_INVERT;
+    nextPortA |= motorCommandBitsForInput(input, IN_MOT_3P_BIT, IN_MOT_3N_BIT);
+  }
+#endif
+
+  //DC Motor 4 (on/off direction via MCP23017 U6_2)
+#ifdef ENABLE_DC_MOTOR_4
+  {
+    float input = cmd->aux[DC_MOTOR_4_AUX_CHANNEL] * DC_MOTOR_4_DIR_INVERT;
+    nextPortA |= motorCommandBitsForInput(input, IN_MOT_4P_BIT, IN_MOT_4N_BIT);
+  }
+#endif
+
+  if (nextPortA != mcpDCMotor.getPortA()) {
+    mcpDCMotor.setPortA(nextPortA);
+  }
+}
+
+// Emergency stop: turn off DC motor 3 and 4
+void profile_aux_motors_stop() {
+  uint8_t nextPortA = mcpDCMotor.getPortA() & ~DC_MOTOR_PORTA_MASK;
+  if (nextPortA != mcpDCMotor.getPortA()) {
+    mcpDCMotor.setPortA(nextPortA);
+  }
+}

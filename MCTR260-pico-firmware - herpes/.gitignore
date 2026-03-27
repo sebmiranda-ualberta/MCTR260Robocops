@@ -1,0 +1,18 @@
+# PlatformIO build artifacts
+.pio/
+
+# IDE settings
+.vscode/
+.idea/
+
+# Build output
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Agent/AI tooling (never ship)
+.agent/
+.agents/
+.gemini/
